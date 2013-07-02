@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="/static/main.css" />
+  <title>{{boardTitle}}</title>
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37694510-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script>
+</head>
+<body>
+  <div class="boardNav">
+    [<a href="/eiken/">eiken</a>]
+  </div>
+  <div class="boardBanner">
+    <div class="boardTitle">{{boardTitle}}</div>
+  </div>
+
+  <hr>
+
+  <table style="text-align: center; width: 100%; height: 300px;">
+    <tbody>
+      <tr valign="middle">
+        <td valign="center" style="font-size: x-large; font-weight: bold;">
+          <span id="errmsg" style="color: red;">Error: {{errorMessage}}</span>
+          <br>
+          <br>
+          [<a href="{{returnPath}}">Return</a></span>]
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <div class="boardNav">
+    [<a href="/eiken/">eiken</a>]
+  </div>
+  </body>
+</html>

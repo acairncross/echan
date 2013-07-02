@@ -1,0 +1,16 @@
+{% extends "boardbase.html" %}
+
+{% block postingmode %}
+<div class="postingMode">
+  Posting mode: Reply
+</div>
+{% endblock %}
+
+{% block boardblock %}
+<div class="thread" id="t{{posts[0].thread_id}}">
+  {% for p in posts %}
+    {{ p.render_threadpost() | safe }}
+  {% endfor %}
+</div>
+<hr style="clear:both">
+{% endblock %}

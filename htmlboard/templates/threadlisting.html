@@ -1,0 +1,24 @@
+{% extends "boardbase.html" %}
+
+{% block boardblock %}
+  {% for thread in threads %}
+    <div class="thread" id="t{{thread[0].threadNum}}">
+      {% for post in thread %}
+        {{ post.render_threadlistingpost() | safe }}
+      {% endfor %}
+    </div>
+    <hr style="clear:both">
+  {% endfor %}
+{% endblock %}
+
+{% block pagelist %}
+<div class="pagelist">
+  <div class="pages">
+    {% for i in range(11) %}
+    {% if pageNum==i %}[<strong>{{i}}</strong>]
+    {% else %}[<a href="/eiken/{{i}}">{{i}}</a>]{% endif %}
+    {% endfor %}
+  </div>
+</div>
+<br style="clear:both">
+{% endblock %}

@@ -1,0 +1,240 @@
+body {
+    background: #EEF2FF url(bg.png) top center repeat-x;
+    color: #000000;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10pt;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+a,
+a:visited { color: #34345C }
+a.replylink { text-decoration: underline!important }
+a.replylink:not(:hover) { color: #34345C!important }
+a:hover { color: #DD0000!important }
+img { border: none }
+hr {
+    border: none;
+    border-top: 1px solid #B7C5D9;
+    height: 0;
+}
+div.board>hr { clear: both }
+hr.abovePostForm { width: 90% }
+div.boardBanner {
+    text-align: center;
+    clear: both;
+    color: #AF0A0F;
+}
+div.boardBanner>div.boardTitle {
+    font-family: Tahoma,sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    margin-top: 0px;
+}
+div.boardBanner>div.boardSubtitle { font-size: x-small }
+div#boardNav {
+    font-size: 9pt;
+    color: #89A;
+    display: block;
+}
+div#boardNav a {
+    font-weight: normal;
+    padding: 1px;
+    text-decoration: none;
+    color: #34345C;
+}
+#navtopright{ float: right; }
+div.opContainer { display: inline }
+div.sideArrows {
+    color: #B7C5D9;
+    float: left;
+    margin-right: 2px;
+    margin-top: 0px;
+    margin-left: 2px;
+}
+div.thread {
+    margin: 0px;
+    clear: both;
+}
+div.post {
+    margin: 4px 0;
+    overflow: hidden;
+}
+
+blockquote>span.quote { color: #789922 }
+.quotelink { color: #D00!important }
+div.thread>div:nth-of-type(2)>div.reply { margin-top: 2px!important }
+div.op { display: inline }
+div.reply {
+    background-color: #D6DAF0;
+    border: 1px solid #B7C5D9;
+    border-left: none;
+    border-top: none;
+    display: table;
+    padding: 2px;
+}
+div.reply input { float: none }
+div.post div.postInfo {
+    display: block;
+    width: 100%;
+}
+div.post div.postInfo span.postNum { }
+div.post div.postInfo span.postNum a {
+    text-decoration: none;
+    color: #000000;
+}
+div.post div.postInfo span.postNum a:hover { color: red!important }
+div.post div.postInfo span.nameBlock { display: inline-block }
+div.post div.postInfo span.nameBlock span.name {
+    color: #117743;
+    font-weight: bold;
+}
+div.post div.postInfo span.nameBlock span.postertrip {
+    color: #117743;
+    font-weight: normal!important;
+}
+.useremail:not(:hover) .name,
+.useremail:not(:hover) .postertrip { color: #34345C!important }
+.useremail:hover * { color: #DD0000!important }
+div.post div.postInfo span.subject {
+    color: #0F0C5D;
+    font-weight: bold;
+}
+
+div.post blockquote.postMessage { display: block }
+
+div.post div.file { display: block }
+div.post div.file div.fileInfo { margin-right: 10px }
+div.replyContainer div.post div.file div.fileInfo { margin-left: 20px }
+div.post div.file .fileThumb {
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+span.fileThumb {
+    margin-left: 0px!important;
+    margin-right: 5px!important;
+}
+div.reply span.fileThumb,
+div.reply span.fileThumb img {
+    float: none!important;
+    margin-top: 0px!important;
+    margin-bottom: 0px!important;
+}
+div.post div.file .fileThumb img {
+    border: none;
+    float: left;
+}
+span.summary {
+    color: #707070;
+    margin-top: 10px;
+}
+
+div.postingMode {
+    background-color: #e04000;
+    padding: 1px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: larger;
+    margin-top: 8px;
+}
+div.thread:last-child {
+    padding-bottom: 21px;
+    margin-bottom: 6px;
+}
+
+div.pagelist {
+    font-size: 13px!important;
+    margin: 0;
+    padding: 3px 7px;
+    float: left;
+    border: none;
+    background: #D6DAF0;
+    border-right: 1px solid #B7C5D9;
+    border-bottom: 1px solid #B7C5D9;
+    list-style: none;
+    overflow: hidden;
+    color: #89A;
+}
+div.pagelist>div { float: left }
+div.pagelist>div span {
+    padding: 4px;
+    display: inline-block;
+}
+div.pagelist strong { color: #000000 }
+
+div.pagelist div.pages { padding: 4px }
+div.pagelist div.pages a { text-decoration: none!important }
+
+table {
+    border-spacing: 1px;
+    margin-left: auto;
+    margin-right: auto;
+}
+table.postForm>tbody>tr>td:first-child {
+    background-color: #98E;
+    color: #000;
+    font-weight: bold;
+    border: 1px solid #000;
+    padding: 0 5px;
+    font-size: 10pt;
+}
+tr.rules td {
+    border: 0px!important;
+    background-color: transparent!important;
+    font-weight: normal!important;
+}
+td {
+    margin: 0px;
+    padding: 0px;
+    font-size: 10pt;
+}
+input[type=text],
+table.postForm>tbody textarea {
+    margin: 0px;
+    margin-right: 2px;
+    padding: 2px 4px 3px 4px;
+    border: 1px solid #AAA;
+    outline: none;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10pt;
+}
+input[type=text]:focus,
+input:not([type]):focus,
+textarea:focus { border: 1px solid #9988EE!important }
+table.postForm>tbody>tr>td>input[type=text] { width: 232px }
+table.postForm>tbody>tr>td>input[name="subject"] { width: 232px }
+.postblock {
+    background-color: #98E;
+    color: #000;
+    font-weight: bold;
+    border: 1px solid #000;
+    padding: 0 5px;
+    font-size: 10pt;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+    tbody textarea {
+        margin-bottom: -3px!important;
+        width: 292px;
+    }
+}
+.reply:target,
+.reply.highlight {
+    background: #D6BAD0!important;
+    border: 1px solid #BA9DBF!important;
+    border-left: none!important;
+    border-top: none!important;
+    padding: 2px;
+}
+input[type="text"],
+input[type="password"],
+textarea {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}

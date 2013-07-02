@@ -1,0 +1,72 @@
+{% if p.isThread %}
+
+<div class="postContainer opContainer" id="pc{{p.postNum}}">
+  <div id="p{{p.postNum}}" class="post op">
+    <div class="file" id="f{{p.postNum}}">
+      <div class="fileInfo">
+        <span class="fileText" id="fT{{p.postNum}}">
+          File: <a href="/eiken/src/{{p.imageNum}}.{{p.filetype}}">{{p.imageNum}}.{{p.filetype}}</a>-({{p.image.size/1000}} KB, {{p.width}}x{{p.height}}, {{p.filename}})
+        </span>
+      </div>
+      <a class="fileThumb" href="/eiken/src/{{p.imageNum}}.{{p.filetype}}">
+        <img src="/eiken/thumb/{{p.imageNum}}.png">
+      </a>
+    </div>
+    <div class="postInfo" id="pi{{postNum}}">
+      {% if p.subject %}
+        <span class="subject">{{p.subject}}</span>
+      {% endif %}
+      <span class="nameBlock">
+        {% if p.email %}<a href="mailto:{{p.email}}" class="useremail">{% endif %}
+        <span class="name">{{p.username}}</span> {% if p.tripcode %}<span class="postertrip">{{p.tripcode}}</span>{% endif %}
+        {% if p.email %}</a>{% endif %}
+      </span>
+      <span class="dateTime">{{p.created.strftime("%d/%m/%y(%a)%H:%M")}}</span>
+      <span class="postNum">
+        <a href="{{p.threadNum}}#p{{p.postNum}}">No.</a><a href="javascript:quote('{{p.postNum}}');">{{p.postNum}}</a>
+      </span>
+    </div>
+    <blockquote class="postMessage" id="m{{p.postNum}}">
+      {{ p.renderText | safe }}
+    </blockquote>
+  </div>
+</div>
+
+{% else %}
+
+<div class="postContainer replyContainer" id="pc{{p.postNum}}">
+  <div class="sideArrows" id="sa{{p.postNum}}">&gt;&gt;</div>
+  <div id="p{{p.postNum}}" class="post reply">
+    <div class="postInfo" id="pi{{p.postNum}}">
+      {% if p.subject %}
+        <span class="subject">{{p.subject}}</span>
+      {% endif %}
+      <span class="nameBlock">
+        {% if p.email %}<a href="mailto:{{p.email}}" class="useremail">{% endif %}
+        <span class="name">{{p.username}}</span> {% if p.tripcode %}<span class="postertrip">{{p.tripcode}}</span>{% endif %}
+        {% if p.email %}</a>{% endif %}
+      </span>
+      <span class="dateTime">{{p.created.strftime("%d/%m/%y(%a)%H:%M")}}</span>
+      <span class="postNum">
+        <a href="{{p.threadNum}}#p{{p.postNum}}">No.</a><a href="javascript:quote('{{p.postNum}}');">{{p.postNum}}</a>
+      </span>
+    </div>
+    {% if p.image %}
+    <div class="file" id="f{{p.postNum}}">
+      <div class="fileInfo">
+        <span class="fileText" id="fT{{p.postNum}}">
+          File: <a href="/eiken/src/{{p.imageNum}}.{{p.filetype}}">{{p.imageNum}}.{{p.filetype}}</a>-({{p.image.size/1000}} KB, {{p.width}}x{{p.height}}, {{p.filename}})
+        </span>
+      </div>
+      <a class="fileThumb" href="/eiken/src/{{p.imageNum}}.{{p.filetype}}">
+        <img src="/eiken/thumb/{{p.imageNum}}.png">
+      </a>
+    </div>
+    {% endif %}
+    <blockquote class="postMessage" id="m{{p.postNum}}">
+      {{ p.renderText | safe }}
+    </blockquote>
+  </div>
+</div>
+
+{% endif %}

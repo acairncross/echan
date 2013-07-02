@@ -1,0 +1,23 @@
+<!doctype html>
+<meta charset="UTF-8">
+
+<html>
+<head>
+  <title>A test</title>
+</head>
+
+<body>
+  <form action="{{upload_url}}" method="post" enctype="multipart/form-data">
+    Upload File: <input type="file" name="file"><br>
+    <input type="submit" name="submit" value="Submit!">
+  </form>
+
+  {% if posts %}
+    {% for p in posts%}
+      <img src="/src/{{p.image.key()}}">
+      <img src="/thumb/{{p.key()}}">
+      <br>
+    {% endfor %}
+  {% endif %}
+</body>
+</html>
